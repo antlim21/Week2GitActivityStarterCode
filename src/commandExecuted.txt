@@ -1,1 +1,22 @@
-a
+B
+git checkout main
+git branch hello
+git checkout hello
+
+A
+git checkout main
+git add src/index.ts
+git commit -m "print message when done"
+git push
+
+B
+git commit -m "print hello message"
+git push --set-upstream origin hello
+
+A
+git pull
+git merge origin/hello
+
+B
+git checkout main
+git pull
